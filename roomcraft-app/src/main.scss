@@ -1,0 +1,22 @@
+@import '../src/styles/variable';
+@import '../src/components/Header/header';
+.container {
+    width:375px;
+    height: 100vh;
+    margin: auto;
+}
+@media(min-width:480px){
+    .container{
+        width:480px;
+    }
+}
+@media(min-width:768px){
+    .container{
+        width:768px;
+    }
+}
+@media(min-width:1440px){
+    .container {
+        width:1440px;
+    }
+}
