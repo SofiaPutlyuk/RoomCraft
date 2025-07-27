@@ -1,6 +1,9 @@
 @import '../src/styles/variable';
 @import '../src/components/Header/header';
 @import '../src/components/Banner/banner';
+@import '../src/pages/Register/register';
+@import '../src/pages/Register/modal-alert';
+@import '../src/pages/CreateCharacter/character';
 .container {
     width:480px;
     height: 100vh;

@@ -1,0 +1,96 @@
+.register-container {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #fceff9, #e0f7fa);
+}
+
+.register-form {
+    background: rgba(255, 255, 255, 0.85);
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 8px 32px rgba(31, 38, 135, 0.2);
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+    width: 300px;
+}
+
+.register-form h2 {
+    font-family: 'Poppins', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: center;
+    color: transparent;
+    font-size: 2.5rem;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-image: url("https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExczBta3RxN2s2bmVrMjF4dmN4c2dvMmlwdm5zcnYzOXdwYzRvamNsNyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/l0HlAvWVOKVN5Ws80/giphy.gif");
+
+}
+
+.register-form input {
+    padding: 12px;
+    border: 1px solid #90caf9;
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.8);
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+.register-form input:focus {
+    border-color: $lightPink;
+    box-shadow: 0 0 5px $lightPink;
+    outline: none;
+}
+.register-form input::placeholder{
+     color: #b0a8c1;
+}
+.register-form button {
+    padding: 12px;
+    border: none;
+    border-radius: 12px;
+    background: linear-gradient(to right, #64b5f6, #ba68c8);
+    color: $whiteColor;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.register-form button:hover {
+    background: linear-gradient(to right, #42a5f5, #ab47bc);
+}
+.input-group {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.input-group .icon {
+    position: absolute;
+    left: 12px;
+    color: #90caf9;
+    font-size: 18px;
+}
+
+.input-group input {
+    padding-left: 40px; 
+    width: 100%;
+}
+.input-group:focus-within .icon {
+    color: $lightPink;
+}
+@media(min-width:768px){
+    .register-form{
+        width:400px;
+    }
+}
+@media(min-width:1440px){
+    .register-form{
+        width:600px;
+    }
+}

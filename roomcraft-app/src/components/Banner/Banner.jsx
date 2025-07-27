@@ -3,6 +3,7 @@ import BedroomVideo from '../../assets/videos/bedroom-video.mp4';
 import OutsideVideo from '../../assets/videos/outside house-video.mp4';
 import OfficeVideo from '../../assets/videos/game office-video.mp4';
 import KidsVideo from '../../assets/videos/kids room-video.mp4';
+import { Link } from 'react-router-dom';
 import { useState } from 'react';
 export const Banner = () => {
     const videoSources = [
@@ -66,7 +67,9 @@ export const Banner = () => {
                 <div className="video-overlay">
                   <h2>{item.title}</h2>
                   <p>{item.description}</p>
+                  <Link to="/register">
                   {item.showButton && <button className="get-started-btn">Get Started</button>}
+                  </Link>
                 </div>
               )}
             </div>

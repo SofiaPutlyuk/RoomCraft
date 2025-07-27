@@ -42,7 +42,7 @@ export const Header = () => {
             </header>
             {menuOpen && (
                 <div className="dropdown-craft">
-                    <a href="" className="link"> <FaHome className="icon-menu" /> Home</a>
+                    <a href="/" className="link"> <FaHome className="icon-menu" /> Home</a>
                     <hr className="craft-dash" />
                     <a href="" className="link"> <MdOutlineMeetingRoom className="icon-menu" />My Rooms</a>
                     <hr className="craft-dash" />
