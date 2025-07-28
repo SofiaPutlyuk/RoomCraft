@@ -23,7 +23,7 @@ export const Header = () => {
                             </div>
                         </li>
                         <li className="item-craft hide">
-                            <a href="" className="link"><FaHome className="icon-menu" /> Home</a>
+                            <a href="/" className="link"><FaHome className="icon-menu" /> Home</a>
                         </li>
                         <li className="item-craft hide">
                             <a href="" className="link"><MdOutlineMeetingRoom className="icon-menu" />My Rooms</a>
@@ -32,7 +32,7 @@ export const Header = () => {
                             <a href="" className="link"><FaPalette className="icon-menu" />Editor</a>
                         </li>
                         <li className="item-craft  hide">
-                            <a href="" className="link"><FaShoppingCart className="icon-menu" />Shop</a>
+                            <a href="/shop" className="link"><FaShoppingCart className="icon-menu" />Shop</a>
                         </li>
                         <li className="item-craft  hide">
                             <button type='button' className="button-sign">Sign up</button>
@@ -48,7 +48,7 @@ export const Header = () => {
                     <hr className="craft-dash" />
                     <a href="" className="link"> <FaPalette className="icon-menu" />Editor</a>
                     <hr className="craft-dash" />
-                    <a href="" className="link"> <FaShoppingCart className="icon-menu" />Shop</a>
+                    <a href="/shop" className="link"> <FaShoppingCart className="icon-menu" />Shop</a>
                 </div>
             )}
         </>

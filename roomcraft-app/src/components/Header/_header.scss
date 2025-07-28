@@ -84,7 +84,9 @@ nav {
     position: absolute;
     z-index: 999;
 }
-
+ a {
+    text-decoration: none;
+}
 .link {
     display: flex;
     gap: 10px;
