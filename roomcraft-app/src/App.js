@@ -4,6 +4,7 @@ import { Route, BrowserRouter, Routes } from 'react-router-dom'
 import './main.scss'
 import { Register } from "./pages/Register/Register";
 import { CreateCharacter } from "./pages/CreateCharacter/CreateCharacter";
+import { Footer } from "./components/Footer/Footer";
 function App() {
   return (
     <BrowserRouter>
@@ -14,6 +15,7 @@ function App() {
           <Route path="/register" element={<Register />} />
           <Route path="/create-character" element={<CreateCharacter />} />
         </Routes>
+        <Footer />
       </div>
     </BrowserRouter>
   );
