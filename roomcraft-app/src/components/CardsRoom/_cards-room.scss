@@ -1,0 +1,52 @@
+.room-cards-section {
+  background: linear-gradient(to right, #fce4ec, #e3f2fd);
+  padding: 60px 20px;
+  margin: 3em auto;
+}
+
+.room-cards-section h2 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 40px;
+  color: #444;
+  font-family: "Comic Sans MS", cursive, sans-serif;
+}
+
+.room-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 24px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.room-card {
+  background: white;
+  border-radius: 20px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.room-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 20px rgba(0, 0, 0, 0.15);
+}
+
+.room-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.room-card h3 {
+  padding: 16px 0;
+  font-size: 1.25rem;
+  color: #555;
+  font-family: "Segoe UI", sans-serif;
+}
+.room-grid a {
+    text-decoration: none;
+}
