@@ -1,4 +1,8 @@
-import  { useState } from "react";
+import { Canvas } from "@react-three/fiber";
+import { OrbitControls } from "@react-three/drei";
+import { useState, useMemo } from "react";
+import * as THREE from "three";
+
 const questions = [
   {
     id: 1,
@@ -41,52 +45,104 @@ const questions = [
 ];
 
 function getRoomStyle(answers) {
-  if (answers["2"] === "pink" && answers["4"] === "cozy") {
+  if (answers[2] === "pink" && answers[4] === "cozy") {
     return {
       name: "Blush Cozy",
-      description:
-        "A warm, inviting room with soft pink hues and comfy textures perfect for relaxation.",
+      color: "#fce4ec",
     };
   }
-  if (answers["2"] === "blue" && answers["4"] === "modern") {
+  if (answers[2] === "blue" && answers[4] === "modern") {
     return {
       name: "Ocean Modern",
-      description:
-        "A sleek, modern room with calming blue tones and minimalist design.",
+      color: "#e3f2fd",
     };
   }
-  if (answers["3"] === "night") {
+  if (answers[3] === "night") {
     return {
       name: "Night Owl Nook",
-      description:
-        "A moody, intimate space perfect for night-time inspiration and calm.",
+      color: "#ede7f6",
     };
   }
   return {
     name: "Fresh Vibes",
-    description:
-      "A balanced and fresh room combining natural colors and comfortable elements.",
+    color: "#e8f5e9",
   };
 }
 
-export const Vibe = () => {
+function Box({ position, color }) {
+  return (
+    <mesh position={position}>
+      <boxGeometry args={[1, 1, 1]} />
+      <meshStandardMaterial color={color} />
+    </mesh>
+  );
+}
+
+function Room({ roomColor }) {
+  const boxes = useMemo(() => {
+    const placed = new Set();
+    const items = [];
+    while (items.length < 25) {
+      const x = Math.floor(Math.random() * 10) - 4.5;
+      const z = Math.floor(Math.random() * 10) - 4.5;
+      const key = `${x},${z}`;
+      if (!placed.has(key)) {
+        placed.add(key);
+        items.push([x, 0.5, z]);
+      }
+    }
+    return items;
+  }, []);
+
+  return (
+    <>
+      <ambientLight intensity={0.5} />
+      <directionalLight position={[10, 10, 5]} intensity={1} />
+      <mesh rotation={[-Math.PI / 2, 0, 0]} receiveShadow>
+        <planeGeometry args={[10, 10, 10, 10]} />
+        <meshStandardMaterial color="#ffffff" wireframe side={THREE.DoubleSide} />
+      </mesh>
+      <mesh position={[0, 1, -5]}>
+        <planeGeometry args={[10, 2]} />
+        <meshStandardMaterial color={roomColor} side={THREE.DoubleSide} />
+      </mesh>
+      <mesh position={[-5, 1, 0]} rotation={[0, Math.PI / 2, 0]}>
+        <planeGeometry args={[10, 2]} />
+        <meshStandardMaterial color={roomColor} side={THREE.DoubleSide} />
+      </mesh>
+      <mesh position={[5, 1, 0]} rotation={[0, -Math.PI / 2, 0]}>
+        <planeGeometry args={[10, 2]} />
+        <meshStandardMaterial color={roomColor} side={THREE.DoubleSide} />
+      </mesh>
+      <mesh position={[0, 1, 5]} rotation={[0, Math.PI, 0]}>
+        <planeGeometry args={[10, 2]} />
+        <meshStandardMaterial color={roomColor} side={THREE.DoubleSide} />
+      </mesh>
+      {boxes.map((pos, i) => (
+        <Box key={i} position={pos} color="#8e44ad" />
+      ))}
+    </>
+  );
+}
+
+export function RoomWithQuiz() {
   const [answers, setAnswers] = useState({});
-  const [showResult, setShowResult] = useState(false);
+  const [showRoom, setShowRoom] = useState(false);
 
   const handleOptionClick = (qId, oId) => {
     setAnswers((prev) => ({ ...prev, [qId]: oId }));
   };
 
   const allAnswered = Object.keys(answers).length === questions.length;
-  const result = showResult ? getRoomStyle(answers) : null;
+  const result = showRoom ? getRoomStyle(answers) : null;
 
   return (
-    <section className="vibe-section">
-      <h2 className="vibe-title">What’s Your Room Vibe?</h2>
-      <p className="vibe-subtitle">Take a quiz and get your perfect room match!</p>
+    <div>
+      {!showRoom ? (
+        <section className="vibe-section">
+          <h2 className="vibe-title">What’s Your Room Vibe?</h2>
+          <p className="vibe-subtitle">Take a quiz and get your perfect room match!</p>
 
-      {!showResult && (
-        <>
           {questions.map(({ id, question, options }) => (
             <div key={id} className="vibe-question">
               <h3 className="vibe-question-title">{question}</h3>
@@ -112,38 +168,24 @@ export const Vibe = () => {
             <button
               className="vibe-submit-button"
               disabled={!allAnswered}
-              onClick={() => setShowResult(true)}
+              onClick={() => setShowRoom(true)}
               type="button"
             >
               Build It!
             </button>
           </div>
-        </>
-      )}
-
-      {showResult && result && (
-        <div className="vibe-result">
-          <h3 className="vibe-result-title">Your Room Style: {result.name}</h3>
-          <p className="vibe-result-description">{result.description}</p>
-          <button
-            className="vibe-build-button"
-            type="button"
-            onClick={() => alert(`Building your ${result.name} room!`)}
-          >
-            Build It!
-          </button>
-          <button
-            className="vibe-try-again-button"
-            type="button"
-            onClick={() => {
-              setAnswers({});
-              setShowResult(false);
-            }}
-          >
-            Try Again
-          </button>
+        </section>
+      ) : (
+        <div style={{ height: "600px" }}>
+          <h2 className="room-title" style={{ textAlign: "center", margin: "10px 0" }}>
+            Here’s your personalized room!
+          </h2>
+          <Canvas camera={{ position: [0, 6, 12], fov: 50 }} shadows>
+            <OrbitControls />
+            <Room roomColor={result.color} />
+          </Canvas>
         </div>
       )}
-    </section>
+    </div>
   );
-};
+}

@@ -4,7 +4,7 @@ import { Route, BrowserRouter, Routes } from 'react-router-dom'
 import './main.scss'
 import { Register } from "./pages/Register/Register";
 import { CreateCharacter } from "./pages/CreateCharacter/CreateCharacter";
-import { Vibe } from "./components/DesignQuiz/DesignQuiz";
+import { RoomWithQuiz} from "./components/DesignQuiz/DesignQuiz";
 import { Footer } from "./components/Footer/Footer";
 function App() {
   return (
@@ -16,7 +16,7 @@ function App() {
           <Route path="/register" element={<Register />} />
           <Route path="/create-character" element={<CreateCharacter />} />
         </Routes>
-        <Vibe />
+        <RoomWithQuiz />
         <Footer />
       </div>
     </BrowserRouter>
