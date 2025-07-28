@@ -6,6 +6,7 @@ import { Register } from "./pages/Register/Register";
 import { CreateCharacter } from "./pages/CreateCharacter/CreateCharacter";
 import { RoomWithQuiz} from "./components/DesignQuiz/DesignQuiz";
 import { CardsRoom } from "./components/CardsRoom/CardsRoom";
+import { StyleShop } from "./pages/Shop/Shop";
 import { Footer } from "./components/Footer/Footer";
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
           <Route path="/" element={<Banner />} />
           <Route path="/register" element={<Register />} />
           <Route path="/create-character" element={<CreateCharacter />} />
+          <Route path="/shop" element={<StyleShop />} />
         </Routes>
         <CardsRoom />
         <RoomWithQuiz />
