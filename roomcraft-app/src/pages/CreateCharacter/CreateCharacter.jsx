@@ -11,17 +11,18 @@ export const CreateCharacter = () => {
     const handleCreate = () => {
         if (name.trim() === "") return;
         alert(`Hero "${name}" created!`);
+        setName("");
+        setAge("");
     };
-    setName("");
-    setAge("");
+
     return (
         <div style={{ display: "flex", gap: "40px", padding: "40px" }}>
             <form style={{ flex: 1, display: "flex", flexDirection: "column", gap: "15px" }}>
                 <h2 style={{ fontSize: "28px", background: "linear-gradient(to right, #FF512F, #DD2476)", WebkitBackgroundClip: "text", color: "transparent" }}>
                     Create Your Hero
                 </h2>
-                <input type="text" placeholder="Hero name" value={name} onChange={(e) => setName(e.target.value)} />
-                <input type="number" placeholder="Age (optional)" value={age} onChange={(e) => setAge(e.target.value)} />
+                <input type="text" placeholder="Hero name" value={name} onChange={(e) => setName(e.target.value)} className="input-character"/>
+                <input type="number" placeholder="Age (optional)" value={age} onChange={(e) => setAge(e.target.value)} className="input-character"/>
 
                 <label>Gender:</label>
                 <select value={gender} onChange={(e) => setGender(e.target.value)}>
