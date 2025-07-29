@@ -1,0 +1,31 @@
+{
+  "files": {
+    "main.css": "/RoomCraft/static/css/main.497c023f.css",
+    "main.js": "/RoomCraft/static/js/main.71fd68ad.js",
+    "static/js/453.c3400f30.chunk.js": "/RoomCraft/static/js/453.c3400f30.chunk.js",
+    "static/media/outside house-video.mp4": "/RoomCraft/static/media/outside house-video.65351edd9e5c99a7d748.mp4",
+    "static/media/bedroom-video.mp4": "/RoomCraft/static/media/bedroom-video.76a5c926023d9b011e0a.mp4",
+    "static/media/kids room-video.mp4": "/RoomCraft/static/media/kids room-video.686d1a14bd9f7d2c15ff.mp4",
+    "static/media/main-video.mp4": "/RoomCraft/static/media/main-video.a9c26618c2e5dac5c1d8.mp4",
+    "static/media/game office-video.mp4": "/RoomCraft/static/media/game office-video.b31370a68d46ee6b0515.mp4",
+    "static/media/fairy-pastel-room.jpg": "/RoomCraft/static/media/fairy-pastel-room.759ff9ed2b99014255e2.jpg",
+    "static/media/ocean-breeze-color.jpg": "/RoomCraft/static/media/ocean-breeze-color.a3119bbafcf83309ac33.jpg",
+    "static/media/kitchen.jpg": "/RoomCraft/static/media/kitchen.2f3c9c25de7d99bb5e8f.jpg",
+    "static/media/retro-color.jpg": "/RoomCraft/static/media/retro-color.66f08b32abe7ca2835d1.jpg",
+    "static/media/sky-pastel-room.jpg": "/RoomCraft/static/media/sky-pastel-room.d141a28e116bb30a9615.jpg",
+    "static/media/living-room.jpg": "/RoomCraft/static/media/living-room.f2c03d4526213f0c85ff.jpg",
+    "static/media/cozy-pink-color.jpg": "/RoomCraft/static/media/cozy-pink-color.3b25c91058e629f5e603.jpg",
+    "static/media/cyber-night-color.jpg": "/RoomCraft/static/media/cyber-night-color.edfc867d2b7ae5dfda94.jpg",
+    "static/media/office.jpg": "/RoomCraft/static/media/office.458ee7a2b113a0420d63.jpg",
+    "static/media/bedroom.jpg": "/RoomCraft/static/media/bedroom.3bdeccedacd1db161239.jpg",
+    "static/media/logoCraft.svg": "/RoomCraft/static/media/logoCraft.17259d74c88c0bbd19cc10afbb198e60.svg",
+    "index.html": "/RoomCraft/index.html",
+    "main.497c023f.css.map": "/RoomCraft/static/css/main.497c023f.css.map",
+    "main.71fd68ad.js.map": "/RoomCraft/static/js/main.71fd68ad.js.map",
+    "453.c3400f30.chunk.js.map": "/RoomCraft/static/js/453.c3400f30.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.497c023f.css",
+    "static/js/main.71fd68ad.js"
+  ]
+}
