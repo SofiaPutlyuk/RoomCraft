@@ -1,0 +1,71 @@
+.game-container {
+  position: relative;
+  border: 3px solid #444;
+  margin: 20px auto;
+  background: #f5f0e6;
+  border-radius: 10px;
+  overflow: hidden;
+  user-select: none;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 30px;
+}
+
+.game-title {
+  text-align: center;
+  margin: 10px 0;
+  color: #2a2a72;
+  user-select: none;
+}
+
+.pillow {
+  position: absolute;
+  bottom: 0;
+  background-color: #a8dadc;
+  border-radius: 20px;
+  text-align: center;
+  line-height: 40px;
+  font-size: 40px;
+  box-shadow: 0 0 10px #457b9d;
+  user-select: none;
+  transition: left 0.1s ease;
+}
+
+.falling-item {
+  position: absolute;
+  font-size: 30px;
+  user-select: none;
+  pointer-events: none;
+}
+
+.score {
+  position: absolute;
+  top: 5px;
+  left: 10px;
+  font-size: 18px;
+  font-weight: bold;
+  color: #1d3557;
+  user-select: none;
+}
+
+.lives {
+  position: absolute;
+  top: 5px;
+  right: 10px;
+  font-size: 18px;
+  font-weight: bold;
+  color: #e63946;
+  user-select: none;
+}
+
+.game-over {
+  position: absolute;
+  top: 40%;
+  width: 100%;
+  text-align: center;
+  font-size: 28px;
+  color: #e63946;
+  font-weight: bold;
+  background-color: rgba(255, 255, 255, 0.85);
+  padding: 20px 0;
+  user-select: none;
+}
