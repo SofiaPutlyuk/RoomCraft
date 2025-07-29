@@ -1,18 +1,20 @@
 import { useRef, useState } from "react";
 import { Canvas, useFrame } from "@react-three/fiber";
 import { OrbitControls } from "@react-three/drei";
-
+import { useNavigate } from "react-router-dom";
 export const CreateCharacter = () => {
     const [name, setName] = useState("");
     const [age, setAge] = useState("");
     const [gender, setGender] = useState("boy");
     const [skinColor, setSkinColor] = useState("#f1c27d");
     const [outfitColor, setOutfitColor] = useState("#4f83cc");
+    const navigate = useNavigate()
     const handleCreate = () => {
         if (name.trim() === "") return;
         alert(`Hero "${name}" created!`);
         setName("");
         setAge("");
+        navigate("/choose-room")
     };
 
     return (

@@ -3,8 +3,8 @@ import { useNavigate } from "react-router-dom";
 import logoCraft from '../../assets/logo/logoCraft.svg'
 import { FaHome } from "react-icons/fa";
 import { MdOutlineMeetingRoom } from "react-icons/md";
-import { FaPalette } from "react-icons/fa6";
 import { FaShoppingCart } from "react-icons/fa";
+import { MdEmojiPeople } from "react-icons/md";
 import { useState, useEffect } from 'react';
 export const Header = ({ user, setUser }) => {
     const [menuOpen, setMenuOpen] = useState(false)
@@ -66,6 +66,9 @@ export const Header = ({ user, setUser }) => {
                             </>
                         ) : (
                             <>
+                             <li className="item-craft  hide">
+                            <a href="/create-character" className="link"><MdEmojiPeople  className="icon-menu" />Character</a>
+                        </li>
                                 <li className="item-craft  hide user-name">
                                     Hello, {user.name}
                                 </li>
@@ -83,7 +86,7 @@ export const Header = ({ user, setUser }) => {
                     <hr className="craft-dash" />
                     <a href="" className="link"> <MdOutlineMeetingRoom className="icon-menu" />My Rooms</a>
                     <hr className="craft-dash" />
-                    <a href="" className="link"> <FaPalette className="icon-menu" />Editor</a>
+                    <a href="/create-character" className="link"> <MdEmojiPeople  className="icon-menu" />Character</a>
                     <hr className="craft-dash" />
                     <a href="/shop" className="link"> <FaShoppingCart className="icon-menu" />Shop</a>
                 </div>
