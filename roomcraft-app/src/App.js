@@ -9,7 +9,10 @@ import { RoomWithQuiz} from "./components/DesignQuiz/DesignQuiz";
 import { CardsRoom } from "./components/CardsRoom/CardsRoom";
 import { StyleShop } from "./pages/Shop/Shop";
 import { ChooseRoom } from "./pages/ModalChooseRoom/ChooseRoom";
+import { KitchenScene } from "./pages/Rooms/Kitchen/Kitchen";
+import { Study } from "./pages/Rooms/Study/Study";
 import { Footer } from "./components/Footer/Footer";
+import { LivingRoomGame } from "./pages/Rooms/Living-room/Living";
 function App() {
   const [user, setUser] = useState(null);
   return (
@@ -22,6 +25,9 @@ function App() {
           <Route path="/create-character" element={<CreateCharacter />} />
           <Route path="/shop" element={<StyleShop />} />
           <Route path="/choose-room" element={<ChooseRoom />} />
+          <Route path="/kitchen" element={<KitchenScene />} />
+          <Route path="/study" element={<Study />} />
+          <Route path="/living" element={<LivingRoomGame />} />
         </Routes>
         <CardsRoom />
         <RoomWithQuiz />
