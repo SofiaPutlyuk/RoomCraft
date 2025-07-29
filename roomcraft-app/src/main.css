@@ -1062,6 +1062,75 @@ form button:active {
   background-color: #6b3ed6;
 }
 
+.choose-room-container {
+  max-width: 500px;
+  margin: 40px auto;
+  padding: 20px;
+  background: #fff0f8;
+  border-radius: 12px;
+  box-shadow: 0 0 12px rgba(255, 192, 203, 0.3);
+  text-align: center;
+  font-family: Arial, sans-serif;
+}
+
+.choose-room-container h2 {
+  margin-bottom: 24px;
+  color: #aa4c8f;
+}
+
+.room-list {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 16px;
+  margin-bottom: 30px;
+}
+
+.room-item {
+  background: #fff;
+  padding: 15px 25px;
+  border: 1px solid #e3b7d2;
+  border-radius: 10px;
+  cursor: pointer;
+  -webkit-user-select: none;
+          user-select: none;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+  min-width: 120px;
+}
+
+.room-item:hover {
+  border-color: #ff82c6;
+  box-shadow: 0 0 10px rgba(255, 105, 180, 0.3);
+}
+
+.room-item.selected {
+  border-color: #ff82c6;
+  background-color: #ffe9f4;
+  font-weight: 600;
+}
+
+button {
+  background-color: #a2c5f5;
+  color: white;
+  padding: 12px 28px;
+  font-size: 16px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:disabled {
+  background-color: #d0e3f9;
+  cursor: not-allowed;
+}
+
+button:not(:disabled):hover {
+  background-color: #89b2ec;
+}
+
 .container {
   width: 480px;
   height: 100vh;
