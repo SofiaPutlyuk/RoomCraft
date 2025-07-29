@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { Banner } from "./components/Banner/Banner";
 import { Header } from "./components/Header/Header";
 import { Route, BrowserRouter, Routes } from 'react-router-dom'
@@ -9,13 +10,14 @@ import { CardsRoom } from "./components/CardsRoom/CardsRoom";
 import { StyleShop } from "./pages/Shop/Shop";
 import { Footer } from "./components/Footer/Footer";
 function App() {
+  const [user, setUser] = useState(null);
   return (
     <BrowserRouter>
       <div className="container">
-        <Header />
+        <Header  user={user} setUser={setUser}/>
         <Routes>
           <Route path="/" element={<Banner />} />
-          <Route path="/register" element={<Register />} />
+          <Route path="/register" element={<Register setUser={setUser} />} />
           <Route path="/create-character" element={<CreateCharacter />} />
           <Route path="/shop" element={<StyleShop />} />
         </Routes>

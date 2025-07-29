@@ -11,7 +11,7 @@ export const CardsRoom = () => {
   ];
 
 return(
-    <section className="room-cards-section">
+    <section className="room-cards-section" id="choose-your-room">
   <h2>Choose Your Room</h2>
   <div className="room-grid">
    {rooms.map((room, index) => (
