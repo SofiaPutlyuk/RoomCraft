@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/RoomCraft/static/css/main.497c023f.css",
-    "main.js": "/RoomCraft/static/js/main.3aceee9c.js",
+    "main.js": "/RoomCraft/static/js/main.f6f9abf6.js",
     "static/js/453.c3400f30.chunk.js": "/RoomCraft/static/js/453.c3400f30.chunk.js",
     "static/media/outside house-video.mp4": "/RoomCraft/static/media/outside house-video.65351edd9e5c99a7d748.mp4",
     "static/media/bedroom-video.mp4": "/RoomCraft/static/media/bedroom-video.76a5c926023d9b011e0a.mp4",
@@ -21,11 +21,11 @@
     "static/media/logoCraft.svg": "/RoomCraft/static/media/logoCraft.17259d74c88c0bbd19cc10afbb198e60.svg",
     "index.html": "/RoomCraft/index.html",
     "main.497c023f.css.map": "/RoomCraft/static/css/main.497c023f.css.map",
-    "main.3aceee9c.js.map": "/RoomCraft/static/js/main.3aceee9c.js.map",
+    "main.f6f9abf6.js.map": "/RoomCraft/static/js/main.f6f9abf6.js.map",
     "453.c3400f30.chunk.js.map": "/RoomCraft/static/js/453.c3400f30.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.497c023f.css",
-    "static/js/main.3aceee9c.js"
+    "static/js/main.f6f9abf6.js"
   ]
 }
